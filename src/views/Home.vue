@@ -5,7 +5,7 @@
         <div class="logo">
           <span>LOGO</span>
         </div>
-        <ul class="header-menu">
+        <ul class="header-menu" :class="headerThemeClass">
           <li class="header-menu-item">
             <a href="/">Home</a>
           </li>
@@ -30,7 +30,14 @@
         </ul>
       </div>
     </div>
-    <img class="top-big-img" src="../assets/big-img.jpg" />
+    <div class="img-text-container">
+      <img class="top-big-img" src="../assets/big-img.jpg" />
+      <div class="text-on-img-container">
+        <div class="text-on-img">We serve high-end custom-tailor.</div>
+        <div class="text-on-img">We serve high-end custom-tailor.</div>
+        <div class="text-on-img">We serve high-end custom-tailor.</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -93,11 +100,32 @@ export default class Home extends Vue {
 .header-menu-item {
   margin-left: 5px;
   display: block;
+  a {
+    color: inherit;
+    text-decoration-line: none;
+  }
+}
+.img-text-container {
+  display: flex;
 }
 .top-big-img {
   margin: 0;
   padding: 0;
   width: 100%;
   bottom: 0;
+  display: block;
+}
+.text-on-img {
+  color: white;
+}
+.text-on-img-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 </style>
