@@ -237,13 +237,14 @@ export default class Home extends Vue {
 .second-questions-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: space-between;
 }
 .second-questions-item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  flex: 1;
 }
 .second-questions-text {
   text-align: center;
@@ -259,7 +260,7 @@ export default class Home extends Vue {
   font-size: 32px;
   text-align: center;
   margin-top: 80px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   border: 1px solid black;
   border-radius: 2px;
   padding-left: 26px;
