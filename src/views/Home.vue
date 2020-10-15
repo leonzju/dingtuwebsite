@@ -10,13 +10,13 @@
             <a href="/">Home</a>
           </li>
           <li class="header-menu-item">
-            <a href="/">Development</a>
+            <a href="/contact">Development</a>
           </li>
           <li class="header-menu-item">
-            <a href="/">Production</a>
+            <a href="/contact">Production</a>
           </li>
           <li class="header-menu-item">
-            <a href="/">Pricing</a>
+            <a href="/contact">Pricing</a>
           </li>
           <li class="header-menu-item">
             <a href="/contact">About Us</a>
@@ -30,13 +30,15 @@
         </ul>
       </div>
     </div>
-    <div class="img-text-container">
-      <img class="top-big-img" src="../assets/big-img.jpg" />
-      <div class="text-on-img-container">
-        <div class="text-on-img">We serve high-end custom-tailor.</div>
-        <div class="text-on-img">We serve high-end custom-tailor.</div>
-        <div class="text-on-img">We serve high-end custom-tailor.</div>
+    <div class="top-text-container">
+      <div class="top-text-minor">We serve high-end custom-tailor.</div>
+      <div class="top-text-main">
+        We help launch your clothing line from development to production.
       </div>
+      <div class="top-text-minor">
+        Quality / Lower Cost / No Minimum Order Quantity
+      </div>
+      <a href="/contact" class="button">Contact Now</a>
     </div>
   </div>
 </template>
@@ -50,6 +52,7 @@ import { Options, Vue } from "vue-class-component";
 })
 export default class Home extends Vue {
   headerThemeClass = "dark-theme";
+  currentPosition = "Home";
   mounted() {
     //给window添加一个滚动滚动监听事件
     window.addEventListener("scroll", this.handleScroll);
@@ -77,14 +80,30 @@ export default class Home extends Vue {
 .header {
   position: fixed;
   width: 100%;
+  z-index: 10;
 }
 .dark-theme {
   background-color: transparent;
   color: white;
+  a {
+    &.active,
+    &:hover {
+      text-shadow: 0 0 1px white, 0 0 1px white;
+      text-decoration-line: underline;
+    }
+  }
 }
 .light-theme {
   background-color: white;
+  opacity: 0.75;
   color: black;
+  a {
+    &.active,
+    &:hover {
+      text-shadow: 0 0 1px black, 0 0 1px black;
+      text-decoration-line: underline;
+    }
+  }
 }
 .header-content {
   position: static;
@@ -93,39 +112,62 @@ export default class Home extends Vue {
   justify-content: space-between;
 }
 .header-menu {
+  list-style: none;
   display: flex;
   display: -webkit-flex;
+  width: 40%;
   justify-content: space-between;
 }
 .header-menu-item {
-  margin-left: 5px;
-  display: block;
+  margin-right: 5px;
+  padding: 10px;
+  text-align: center;
+  flex-shrink: 1;
   a {
     color: inherit;
     text-decoration-line: none;
   }
 }
-.img-text-container {
+.top-text-container {
   display: flex;
-}
-.top-big-img {
-  margin: 0;
-  padding: 0;
+  background-image: url("../assets/big-img.jpg");
+  height: 100vh;
   width: 100%;
-  bottom: 0;
-  display: block;
-}
-.text-on-img {
-  color: white;
-}
-.text-on-img-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+}
+.top-text-main {
+  color: white;
+  font-size: 56px;
+  text-align: center;
+  width: 60%;
+}
+.top-text-minor {
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  width: 60%;
+  margin: 30px;
+}
+.button {
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration-line: none;
+  &:hover {
+    background-color: #f5f5f5;
+    color: black;
+  }
 }
 </style>
