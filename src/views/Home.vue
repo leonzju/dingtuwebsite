@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <div class="header">
       <div class="header-content" :style="headerContentStyle">
         <div class="logo" :class="{ light: isLightTheme }"></div>
@@ -42,6 +42,27 @@
       <div class="second-text-main">
         Do you struggle with your production?
       </div>
+      <div class="second-questions-container">
+        <div class="second-questions-item">
+          <div class="second-questions-text">
+            DO YOU NEED A FACTORY THAT CAN PRODUCE QUALITY GARMENTS?
+          </div>
+          <img class="second-questions-img" src="../assets/svg_01.png" />
+        </div>
+        <div class="second-questions-item">
+          <div class="second-questions-text">
+            ARE YOU TRYING TO SOURCE QUALITY FABRICS IN CHINA?
+          </div>
+          <img class="second-questions-img" src="../assets/svg_02.png" />
+        </div>
+        <div class="second-questions-item">
+          <div class="second-questions-text">
+            DO YOU WORRY ABOUT HOW YOUR PRODUCTION PARTNERS TREAT THEIR WORKERS?
+          </div>
+          <img class="second-questions-img" src="../assets/svg_03.png" />
+        </div>
+      </div>
+      <a href="/contact" class="second-questions-button">We Can Help</a>
     </div>
   </div>
 </template>
@@ -124,7 +145,7 @@ export default class Home extends Vue {
   list-style: none;
   display: flex;
   display: -webkit-flex;
-  width: 40%;
+  width: 50%;
   justify-content: space-between;
 }
 .header-menu-item {
@@ -202,13 +223,53 @@ export default class Home extends Vue {
 }
 .second-item-container {
   display: flex;
+  padding: 5px;
+  margin-top: 100px;
+  flex-direction: column;
   color: black;
   justify-content: center;
+  align-items: center;
 }
 .second-text-main {
   font-size: 56px;
+  margin: 80px;
 }
 .second-questions-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.second-questions-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.second-questions-text {
+  text-align: center;
+  width: 75%;
+  margin-bottom: 50px;
+}
+.second-questions-img {
+  width: 200px;
+  height: 200px;
+}
+.second-questions-button {
+  color: black;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration-line: none;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
 }
 </style>
