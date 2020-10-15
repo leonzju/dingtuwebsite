@@ -1,11 +1,9 @@
 <template>
   <div>
     <div class="header">
-      <div class="header-content" :class="headerThemeClass">
-        <div class="logo">
-          <span>LOGO</span>
-        </div>
-        <ul class="header-menu" :class="headerThemeClass">
+      <div class="header-content" :style="headerContentStyle">
+        <div class="logo" :class="{ light: isLightTheme }"></div>
+        <ul class="header-menu">
           <li class="header-menu-item">
             <a href="/">Home</a>
           </li>
@@ -24,7 +22,7 @@
           <li class="header-menu-item">
             <a href="/contact">FAQ</a>
           </li>
-          <li class="header-menu-item">
+          <li class="header-menu-item-button">
             <a href="/contact">Contact</a>
           </li>
         </ul>
@@ -51,8 +49,15 @@ import { Options, Vue } from "vue-class-component";
   props: {}
 })
 export default class Home extends Vue {
-  headerThemeClass = "dark-theme";
+  //headerThemeClass = "dark-theme";
   currentPosition = "Home";
+  isLightTheme = false;
+  headerContentStyle = {
+    "--background-color": "transparent",
+    "--opacity": 1.0,
+    "--color": "white",
+    "--invert-color": "black"
+  };
   mounted() {
     //给window添加一个滚动滚动监听事件
     window.addEventListener("scroll", this.handleScroll);
@@ -64,9 +69,17 @@ export default class Home extends Vue {
       document.documentElement.scrollTop ||
       document.body.scrollTop;
     if (scrollTop <= 5) {
-      this.headerThemeClass = "dark-theme";
+      this.headerContentStyle["--background-color"] = "transparent";
+      this.headerContentStyle["--opacity"] = 1.0;
+      this.headerContentStyle["--color"] = "white";
+      this.headerContentStyle["--invert-color"] = "black";
+      this.isLightTheme = false;
     } else {
-      this.headerThemeClass = "light-theme";
+      this.headerContentStyle["--background-color"] = "white";
+      this.headerContentStyle["--opacity"] = 0.9;
+      this.headerContentStyle["--color"] = "black";
+      this.headerContentStyle["--invert-color"] = "white";
+      this.isLightTheme = true;
     }
   }
   unmounted() {
@@ -82,34 +95,24 @@ export default class Home extends Vue {
   width: 100%;
   z-index: 10;
 }
-.dark-theme {
-  background-color: transparent;
-  color: white;
-  a {
-    &.active,
-    &:hover {
-      text-shadow: 0 0 1px white, 0 0 1px white;
-      text-decoration-line: underline;
-    }
-  }
-}
-.light-theme {
-  background-color: white;
-  opacity: 0.75;
-  color: black;
-  a {
-    &.active,
-    &:hover {
-      text-shadow: 0 0 1px black, 0 0 1px black;
-      text-decoration-line: underline;
-    }
-  }
-}
 .header-content {
   position: static;
   display: flex;
   display: -webkit-flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  opacity: var(--opacity);
+  color: var(--color);
+}
+.logo {
+  margin-left: 20px;
+  width: 85px;
+  height: 28px;
+  background-image: url("../assets/logo_white.png");
+}
+.logo.light {
+  background-image: url("../assets/logo_black.png");
 }
 .header-menu {
   list-style: none;
@@ -120,18 +123,39 @@ export default class Home extends Vue {
 }
 .header-menu-item {
   margin-right: 5px;
-  padding: 10px;
+  padding: 8px;
   text-align: center;
-  flex-shrink: 1;
+  &:active,
+  &:hover {
+    text-shadow: 0 0 1px var(--color), 0 0 1px var(--color);
+    border-bottom: 2px solid var(--color);
+  }
   a {
     color: inherit;
+    text-decoration-line: none;
+  }
+}
+.header-menu-item-button {
+  margin-right: 5px;
+  padding: 10px;
+  text-align: center;
+  text-decoration-line: none;
+  a {
+    margin-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: var(--color);
+    color: var(--invert-color);
+    border-radius: 4px;
     text-decoration-line: none;
   }
 }
 .top-text-container {
   display: flex;
   background-image: url("../assets/big-img.jpg");
-  height: 100vh;
+  height: 150vh;
   width: 100%;
   display: flex;
   display: -webkit-flex;
