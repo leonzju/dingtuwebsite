@@ -28,7 +28,7 @@
         </ul>
       </div>
     </div>
-    <div class="top-text-container">
+    <div id="first-item" class="top-text-container">
       <div class="top-text-minor">We serve high-end custom-tailor.</div>
       <div class="top-text-main">
         We help launch your clothing line from development to production.
@@ -37,6 +37,11 @@
         Quality / Lower Cost / No Minimum Order Quantity
       </div>
       <a href="/contact" class="button">Contact Now</a>
+    </div>
+    <div id="second-item" class="second-item-container">
+      <div class="second-text-main">
+        Do you struggle with your production?
+      </div>
     </div>
   </div>
 </template>
@@ -107,8 +112,9 @@ export default class Home extends Vue {
 }
 .logo {
   margin-left: 20px;
-  width: 85px;
-  height: 28px;
+  width: 100px;
+  height: 40px;
+  background-size: 100% 100%;
   background-image: url("../assets/logo_white.png");
 }
 .logo.light {
@@ -155,7 +161,7 @@ export default class Home extends Vue {
 .top-text-container {
   display: flex;
   background-image: url("../assets/big-img.jpg");
-  height: 150vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   display: -webkit-flex;
@@ -193,5 +199,16 @@ export default class Home extends Vue {
     background-color: #f5f5f5;
     color: black;
   }
+}
+.second-item-container {
+  display: flex;
+  color: black;
+  justify-content: center;
+}
+.second-text-main {
+  font-size: 56px;
+}
+.second-questions-container {
+  display: flex;
 }
 </style>
