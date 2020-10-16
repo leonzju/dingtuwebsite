@@ -36,7 +36,7 @@
       <div class="top-text-minor">
         Quality / Lower Cost / No Minimum Order Quantity
       </div>
-      <a href="/contact" class="button">Contact Now</a>
+      <a href="/contact" class="top-button">Contact Now</a>
     </div>
     <div id="second-item" class="second-item-container">
       <div class="second-text-main">
@@ -62,7 +62,134 @@
           <img class="second-questions-img" src="../assets/svg_03.png" />
         </div>
       </div>
-      <a href="/contact" class="second-questions-button">We Can Help</a>
+      <a href="/contact" class="second-third-item-button">We Can Help</a>
+    </div>
+    <div id="third-item" class="third-item-container">
+      <img src="../assets/third-item.jpg" class="third-item-img" />
+      <div class="third-item-text-container">
+        <div class="third-item-main">Development</div>
+        <div class="third-item-minor">
+          We provide the whole package of development. We start with listening
+          to you, understanding your concept and your customers better. Together
+          with you, we create patterns, do grading and make fit samples for your
+          approval. We can even source fabrics in Italy, Japan, Korea, China
+          from our large network of fabric vendors for you. During the sampling
+          stage, we will provide pictures of muslin samples and revise samples
+          for free before actual sample making. At the end of this development
+          process, you will get your production-ready lines that you love.
+        </div>
+        <a href="/contact" class="second-third-item-button">Contact Now</a>
+      </div>
+      <div id="fourth-item" class="third-item-container">
+        <div class="third-item-text-container">
+          <div class="third-item-main">Production</div>
+          <div class="third-item-minor">
+            No matter whether you wish to develop your line with us or you have
+            already got your line developed, we work with you for your needs
+            with a fast turnaround. No matter whether you are a made-to-order
+            business, a small startup looking for ten pieces, or a larger brand
+            in need of producing thousands of pieces, we work with you. There is
+            no minimum order quantity requirement. We will refund basic sample
+            fee and offer free pattern development for any order of more than
+            one hundred production pieces.
+          </div>
+          <a href="/contact" class="second-third-item-button">Contact Now</a>
+        </div>
+        <img src="../assets/fourth-item.jpg" class="third-item-img" />
+      </div>
+    </div>
+    <div id="why-us" class="why-us-container">
+      <div class="commitment-img">
+        <div class="why-us-text-container">
+          <div class="third-item-main">Development</div>
+          <div class="third-item-minor">
+            We provide the whole package of development. We start with listening
+            to you, understanding your concept and your customers better.
+            Together with you, we create patterns, do grading and make fit
+            samples for your approval. We can even source fabrics in Italy,
+            Japan, Korea, China from our large network of fabric vendors for
+            you. During the sampling stage, we will provide pictures of muslin
+            samples and revise samples for free before actual sample making. At
+            the end of this development process, you will get your
+            production-ready lines that you love.
+          </div>
+          <a href="/contact" class="second-third-item-button">Contact Now</a>
+        </div>
+      </div>
+      <div class="communication-img">
+        <div class="why-us-text-container">
+          <div class="third-item-main">Development</div>
+          <div class="third-item-minor">
+            We provide the whole package of development. We start with listening
+            to you, understanding your concept and your customers better.
+            Together with you, we create patterns, do grading and make fit
+            samples for your approval. We can even source fabrics in Italy,
+            Japan, Korea, China from our large network of fabric vendors for
+            you. During the sampling stage, we will provide pictures of muslin
+            samples and revise samples for free before actual sample making. At
+            the end of this development process, you will get your
+            production-ready lines that you love.
+          </div>
+          <a href="/contact" class="second-third-item-button">Contact Now</a>
+        </div>
+      </div>
+    </div>
+    <div id="testimonial" class="testimonial-container">
+      <div class="third-item-main">Testimonial</div>
+      <div class="third-item-minor">
+        Having considered dozens of factories in China, we chose Seam Placement
+        as our strategic partner. It is one of the best decisions that we have
+        made. Seam Placement helped us launch our first customization line. They
+        are still our sole production partner. We are extremely happy with the
+        professionalism and work ethic of the team. Work with Seam Placement and
+        you will not regret.
+      </div>
+      <div class="guest-sign-container">
+        <div class="guest-sign">- Shangwei Ding, CEO of frilly.com</div>
+        <img class="guest-sign-img" src="../assets/shang.png" />
+      </div>
+    </div>
+    <div id="sayings" class="sayings">
+      We love making clothes. We pay attention to every detail to make our
+      products meet your expectation.
+    </div>
+    <div id="contact" class="contact-container">
+      <div class="contact-form-container">
+        <form class="contact-form">
+          <div class="send-us-a-message">
+            Send us a message.
+          </div>
+          <input type="text" class="contact-form-input-text" />
+          <input type="text" class="contact-form-input-text" />
+          <input type="text" class="contact-form-input-text" />
+          <input type="text" class="contact-form-input-text" />
+          <button class="submit">SUBMIT</button>
+        </form>
+      </div>
+      <div class="address-email-container">
+        <div class="address-item">
+          <img class="address-icon" src="../assets/address.png" />
+          <div class="address-text">
+            3rd Floor, Building No.17, Xinhua Group Creative Garden, No.59
+            Shixiang Road, Xiacheng District, Hangzhou, Zhejiang, China
+          </div>
+        </div>
+        <div class="address-item">
+          <img class="address-icon" src="../assets/email.png" />
+          <div class="address-text">
+            jenny@seamplacement.com
+          </div>
+        </div>
+        <div class="address-item">
+          <img class="address-icon" src="../assets/skype.png" />
+          <div class="address-text">
+            Skype: seam placement
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        Copyright © 2019 Seamplacement. All rights reserved.
+      </div>
     </div>
   </div>
 </template>
@@ -203,7 +330,7 @@ export default class Home extends Vue {
   width: 60%;
   margin: 30px;
 }
-.button {
+.top-button {
   color: white;
   font-size: 32px;
   text-align: center;
@@ -255,7 +382,7 @@ export default class Home extends Vue {
   width: 200px;
   height: 200px;
 }
-.second-questions-button {
+.second-third-item-button {
   color: black;
   font-size: 32px;
   text-align: center;
