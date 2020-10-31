@@ -1,8 +1,27 @@
 <template>
   <div class="main">
-    <div class="header">
-      <img class="logo" />
-      <div class="nav-button" />
+    <div class="header" :class="{ headerDark: isHeaderDark }">
+      <img class="logo" src="../assets/logo_black.png" />
+      <div class="title">
+        湖南鼎图智能科技有限公司
+      </div>
+      <ul class="navigation">
+        <li>
+          Home
+        </li>
+        <li>
+          Solution
+        </li>
+        <li>
+          Product
+        </li>
+        <li>
+          Contact
+        </li>
+      </ul>
+      <div class="menuButton">
+        <img src="../assets/skype.png" />
+      </div>
     </div>
     <div class="content" />
   </div>
@@ -16,15 +35,8 @@ import { Options, Vue } from "vue-class-component";
   props: {}
 })
 export default class Home extends Vue {
-  //headerThemeClass = "dark-theme";
   currentPosition = "Home";
-  isLightTheme = false;
-  headerContentStyle = {
-    "--background-color": "transparent",
-    "--opacity": 1.0,
-    "--color": "white",
-    "--invert-color": "black"
-  };
+  isHeaderDark = false;
   mounted() {
     //给window添加一个滚动滚动监听事件
     window.addEventListener("scroll", this.handleScroll);
@@ -36,17 +48,9 @@ export default class Home extends Vue {
       document.documentElement.scrollTop ||
       document.body.scrollTop;
     if (scrollTop <= 5) {
-      this.headerContentStyle["--background-color"] = "transparent";
-      this.headerContentStyle["--opacity"] = 1.0;
-      this.headerContentStyle["--color"] = "white";
-      this.headerContentStyle["--invert-color"] = "black";
-      this.isLightTheme = false;
+      this.isHeaderDark = false;
     } else {
-      this.headerContentStyle["--background-color"] = "white";
-      this.headerContentStyle["--opacity"] = 0.9;
-      this.headerContentStyle["--color"] = "black";
-      this.headerContentStyle["--invert-color"] = "white";
-      this.isLightTheme = true;
+      this.isHeaderDark = true;
     }
   }
   unmounted() {
@@ -58,13 +62,46 @@ export default class Home extends Vue {
 
 <style lang="scss" scoped>
 .header {
+  background-color: transparent;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+.headerDark {
+  background-color: black;
+  color: white;
 }
 .logo {
-  float: left;
-  background-image: url("../assets/logo_black.png");
-  height: 2rem;
 }
-.nav-button {
-  float: right;
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+}
+ul {
+  list-style-type: none;
+  li {
+    margin: 0 5%;
+  }
+}
+.navigation {
+  flex-grow: 1;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  display: none;
+}
+.menuButton {
+}
+@media (min-width: 800px) {
+  .menuButon {
+    display: none;
+  }
+  .navigation {
+    display: flex;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    font-size: 1em;
+  }
 }
 </style>
