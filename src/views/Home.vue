@@ -5,21 +5,21 @@
       <div class="title">
         湖南鼎图智能科技有限公司
       </div>
-      <ul class="navigation">
+      <ul class="navigation" :class="{ navigationHidden: isNavigationHidden }">
         <li>
-          Home
+          <a href="/">Home</a>
         </li>
         <li>
-          Solution
+          <a href="/">Solution</a>
         </li>
         <li>
-          Product
+          <a href="/">Product</a>
         </li>
         <li>
-          Contact
+          <a href="/">Contact</a>
         </li>
       </ul>
-      <div class="menuButton">
+      <div class="menuButton" @click="onMenuButtonClicked">
         <img src="../assets/skype.png" />
       </div>
     </div>
@@ -37,6 +37,7 @@ import { Options, Vue } from "vue-class-component";
 export default class Home extends Vue {
   currentPosition = "Home";
   isHeaderDark = false;
+  isNavigationHidden = true;
   mounted() {
     //给window添加一个滚动滚动监听事件
     window.addEventListener("scroll", this.handleScroll);
@@ -56,6 +57,9 @@ export default class Home extends Vue {
   unmounted() {
     //离开该页面需要移除这个监听的事件
     window.removeEventListener("scroll", this.handleScroll);
+  }
+  onMenuButtonClicked() {
+    this.isNavigationHidden = !this.isNavigationHidden;
   }
 }
 </script>
@@ -84,20 +88,48 @@ ul {
   }
 }
 .navigation {
-  flex-grow: 1;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0px;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  li{
+    width: 50%;
+    
+  }
+}
+.navigationHidden {
   display: none;
 }
 .menuButton {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 @media (min-width: 800px) {
-  .menuButon {
+  .menuButton {
     display: none;
   }
   .navigation {
-    display: flex;
+    flex-grow: 1;
+    z-index: auto;
+    
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: initial;
   }
+  .navigationHidden {
+  display: flex;
+}
 }
 @media (min-width: 1200px) {
   :root {
