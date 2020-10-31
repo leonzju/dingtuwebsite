@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    <div class="modalMask" :class="{modalMaskHidden: isModalMaskHidden}"/>
     <div class="header" :class="{ headerDark: isHeaderDark }">
       <img class="logo" src="../assets/logo_black.png" />
       <div class="title">
@@ -38,6 +39,7 @@ export default class Home extends Vue {
   currentPosition = "Home";
   isHeaderDark = false;
   isNavigationHidden = true;
+  isModalMaskHidden = true;
   mounted() {
     //给window添加一个滚动滚动监听事件
     window.addEventListener("scroll", this.handleScroll);
@@ -60,11 +62,25 @@ export default class Home extends Vue {
   }
   onMenuButtonClicked() {
     this.isNavigationHidden = !this.isNavigationHidden;
+    this.isModalMaskHidden = !this.isModalMaskHidden;
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.modalMask{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
+  width:100vw;
+  height:100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0px;
+}
+.modalMaskHidden{
+  display: none;
+}
 .header {
   background-color: transparent;
   color: black;
@@ -89,19 +105,20 @@ ul {
 }
 .navigation {
   z-index: 1000;
-  width: 100vw;
+  position:absolute;
+  width: 80vw;
   height: 100vh;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  margin: 0px;
-  left: 0px;
+  left: 20vw;
   top: 0px;
+  margin: 0px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  background: black;
   li{
     width: 50%;
-    
+    height: 2rem;
+    margin: 2rem 0rem;
   }
 }
 .navigationHidden {
