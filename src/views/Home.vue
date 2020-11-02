@@ -53,6 +53,35 @@
         </div>
         <a href="/contact" class="topButton">Contact Now</a>
       </div>
+      <div class="struggleContainer">
+        <div class="struggleText">
+          Do you struggle with your production?
+        </div>
+        <div class="struggleQuestionsContainer">
+          <div class="struggleQuestion">
+            <div class="stuggleQuestionText">
+              DO YOU NEED A FACTORY THAT CAN PRODUCE QUALITY GARMENTS?
+            </div>
+            <img src="../assets/svg_01.png" />
+          </div>
+          <div class="struggleQuestion">
+            <div class="stuggleQuestionText">
+              ARE YOU TRYING TO SOURCE QUALITY FABRICS IN CHINA?
+            </div>
+            <img src="../assets/svg_02.png" />
+          </div>
+          <div class="struggleQuestion">
+            <div class="stuggleQuestionText">
+              DO YOU WORRY ABOUT HOW YOUR PRODUCTION PARTNERS TREAT THEIR
+              WORKERS?
+            </div>
+            <img src="../assets/svg_03.png" />
+          </div>
+        </div>
+        <div class="topButton">
+          We can help.
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -231,6 +260,58 @@ ul {
     }
   }
 }
+.struggleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .struggleText {
+    margin: 10vh 0px;
+    width: 90%;
+    font-size: 4rem;
+    text-align: center;
+  }
+  .struggleQuestionsContainer {
+    display: flex;
+    flex-flow: wrap;
+    .struggleQuestion {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      @media (min-width: 800px) {
+        width: 33%;
+      }
+      .stuggleQuestionText {
+        width: 90%;
+        font-size: 2rem;
+        text-align: center;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+  .topButton {
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+    margin: 10vh 0px;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration-line: none;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+    cursor: pointer;
+  }
+}
 
 @media (min-width: 800px) {
   .header {
@@ -262,8 +343,15 @@ ul {
       margin: 0 5%;
     }
     :last-child {
+      border-bottom: initial;
       text-align: center;
       text-decoration-line: none;
+      padding: 2px 6px;
+      &:active,
+      &:hover {
+        text-shadow: initial;
+        border-bottom: initial;
+      }
       a {
         background-color: var(--color);
         color: var(--background-color);
