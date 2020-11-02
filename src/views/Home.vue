@@ -41,20 +41,17 @@
       </div>
     </div>
     <div class="content">
-      <div class="topImage">
-        <div class="topImageTextContainer">
-          <div class="pretitle">
-            We serve high-end custom-tailor.
-          </div>
-          <div class="pretitle">
-            We help launch your clothing line from development to production.
-          </div>
-          <div class="pretitle">
-            Quality / Lower Cost / No Minimum Order Quantity
-          </div>
-          <a href="/contact" class="top-button">Contact Now</a>
+      <div class="topImageTextContainer">
+        <div class="preTitle">
+          We serve high-end custom-tailor.
         </div>
-        <img src="../assets/big-img.jpg" />
+        <div class="middleTitle">
+          We help launch your clothing line from development to production.
+        </div>
+        <div class="postTitle">
+          Quality / Lower Cost / No Minimum Order Quantity
+        </div>
+        <a href="/contact" class="topButton">Contact Now</a>
       </div>
     </div>
   </div>
@@ -72,13 +69,13 @@ export default class Home extends Vue {
   isHeaderDark = false;
   isNavigationHidden = true;
   isModalMaskHidden = true;
-  modalMaskClickHandler: any = null;
+  modalMaskClickHandler?: () => void = undefined;
   mounted() {
     //给window添加一个滚动滚动监听事件
     window.addEventListener("scroll", this.handleScroll);
   }
   onModalMaskClicked() {
-    if (this.modalMaskClickHandler != null) {
+    if (this.modalMaskClickHandler != undefined) {
       this.modalMaskClickHandler();
     }
   }
@@ -106,7 +103,7 @@ export default class Home extends Vue {
         this.onMenuButtonClicked();
       };
     } else {
-      this.modalMaskClickHandler = null;
+      this.modalMaskClickHandler = undefined;
     }
   }
 }
@@ -136,6 +133,7 @@ export default class Home extends Vue {
   top: 0px;
   position: sticky;
   z-index: 1000;
+  height: 50px;
 }
 .headerDark {
   --color: white;
@@ -184,34 +182,59 @@ ul {
   display: flex;
   justify-content: flex-end;
 }
-.threeLineIcon{
+.threeLineIcon {
   width: 20px;
   height: 20px;
+  margin: 4px;
 }
 .content {
   width: 100%;
 }
-.topImage {
-  img {
-    margin-top: -10rem;
-    height: auto;
-    width: 100%;
-  }
-}
 .topImageTextContainer {
-  z-index: 100;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  position: relative;
+  width: 100vw;
+  height: calc(100vh + 50px);
+  margin-top: -50px;
+  background-image: url("../assets/big-img-m.jpg");
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  color: white;
+  .preTitle {
+    margin-top: 20vh;
+    width: 90%;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .middleTitle {
+    width: 90%;
+    font-size: 3rem;
+    text-align: center;
+  }
+  .postTitle {
+    width: 90%;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .topButton {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 10vh;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    padding: 2vh 8vw;
+    text-decoration-line: none;
+    &:hover {
+      background-color: #f5f5f5;
+      color: black;
+    }
+  }
 }
+
 @media (min-width: 800px) {
   .header {
-    z-index: initial;
+    z-index: 10;
   }
   .menuButton {
     display: none;
@@ -238,9 +261,22 @@ ul {
       height: initial;
       margin: 0 5%;
     }
+    :last-child {
+      text-align: center;
+      text-decoration-line: none;
+      a {
+        background-color: var(--color);
+        color: var(--background-color);
+        border-radius: 4px;
+        text-decoration-line: none;
+      }
+    }
   }
   .navigationHidden {
     display: flex;
+  }
+  .topImageTextContainer {
+    background-image: url("../assets/big-img.jpg");
   }
 }
 @media (min-width: 1200px) {
