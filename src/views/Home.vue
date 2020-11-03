@@ -6,11 +6,16 @@
       @click="onModalMaskClicked"
     />
     <div class="header" :class="{ headerDark: isHeaderDark }">
-      <img class="logo" src="../assets/logo_black.png" />
+      <div class="logo" />
       <div class="title">
         湖南鼎图智能科技有限公司
       </div>
       <ul class="navigation" :class="{ navigationHidden: isNavigationHidden }">
+        <li class="navigationHeader">
+          <div class="logo" />
+          <div class="title">湖南鼎图智能科技有限公司</div>
+          <div class="closeButton" @click="onMenuCloseButtonClicked">X</div>
+        </li>
         <li>
           <a href="/">Home</a>
         </li>
@@ -135,12 +140,15 @@ export default class Home extends Vue {
       this.modalMaskClickHandler = undefined;
     }
   }
+  onMenuCloseButtonClicked() {
+    this.onMenuButtonClicked();
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 .modalMask {
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 0px;
   z-index: 100;
@@ -155,10 +163,12 @@ export default class Home extends Vue {
 .header {
   --color: black;
   --background-color: rgb(200, 200, 200, 0.75);
+  --logo: url("../assets/logo_black.png");
   color: var(--color);
   background-color: var(--background-color);
   display: flex;
   align-items: center;
+  justify-content: space-around;
   top: 0px;
   position: sticky;
   z-index: 1000;
@@ -167,8 +177,14 @@ export default class Home extends Vue {
 .headerDark {
   --color: white;
   --background-color: rgb(50, 50, 50, 0.75);
+  --logo: url("../assets/logo_white.png");
 }
 .logo {
+  background-image: var(--logo);
+  background-size: cover;
+  width: 24.2px;
+  height: 29.1px;
+  margin: 0px 4px 0px 10px;
 }
 .title {
   text-align: center;
@@ -180,7 +196,10 @@ ul {
     text-align: center;
     a {
       width: 100%;
-      color: inherit;
+      color: black;
+      @media (min-width: 800px) {
+        color: inherit;
+      }
       text-decoration-line: none;
     }
   }
@@ -190,13 +209,37 @@ ul {
   position: absolute;
   width: 80vw;
   height: 100vh;
-  left: 20vw;
+  left: 0px;
   top: 0px;
   margin: 0px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   background: white;
+  padding: 0px;
+  .navigationHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 51px;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 1px solid gray;
+    color: black;
+    @media (min-width: 800px) {
+      display: none;
+    }
+    .logo {
+      background-image: url("../assets/logo_black.png");
+      background-size: cover;
+      width: 24.2px;
+      height: 29.1px;
+    }
+    .closeButton{
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+  }
   li {
     width: 100%;
     height: 2rem;
