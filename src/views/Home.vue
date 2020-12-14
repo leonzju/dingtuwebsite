@@ -7,9 +7,7 @@
     />
     <div class="header" :class="{ headerDark: isHeaderDark }">
       <div class="logo" />
-      <div class="title">
-        湖南鼎图智能科技有限公司
-      </div>
+      <div class="title">湖南鼎图智能科技有限公司</div>
       <ul class="navigation" :class="{ navigationHidden: isNavigationHidden }">
         <li class="navigationHeader">
           <div class="logo" />
@@ -17,19 +15,19 @@
           <div class="closeButton" @click="onMenuCloseButtonClicked">X</div>
         </li>
         <li>
-          <a href="/">Home</a>
+          <a href="/#introduction">公司介绍</a>
         </li>
         <li>
-          <a href="/">Solution</a>
+          <a href="/#solution">解决方案</a>
         </li>
         <li>
-          <a href="/">Product</a>
+          <a href="/#product">产品服务</a>
         </li>
         <li>
-          <a href="/">Demo</a>
+          <a href="/#case">应用案例</a>
         </li>
         <li>
-          <a href="/">Contact</a>
+          <a href="/#contact">联系我们</a>
         </li>
       </ul>
       <div class="menuButton" @click="onMenuButtonClicked">
@@ -46,47 +44,90 @@
       </div>
     </div>
     <div class="content">
-      <div class="topImageTextContainer">
-        <div class="preTitle">
-          We serve high-end custom-tailor.
-        </div>
+      <div class="topImageTextContainer" id="introduction">
+        <div class="preTitle">公司介绍</div>
         <div class="middleTitle">
-          We help launch your clothing line from development to production.
+          湖南鼎图智能科技有限公司是一家以虚拟现实系统开发、智能制造服务技术、高性能计算系统方案为核心的高科技企业。公司秉承“科技改变世界”为宗旨，通过高性能仿真分析、数字样机与数字孪生、大数据处理和分析、以及虚拟交互可视化，助力企业提升数字化、网络化和智能化水平，变革传统生产、制造、销售和维护等模式，提高产品全生命周期性能和效率。
         </div>
-        <div class="postTitle">
-          Quality / Lower Cost / No Minimum Order Quantity
-        </div>
-        <a href="/contact" class="topButton">Contact Now</a>
+        <div class="postTitle"></div>
+        <a href="/#contact" class="topButton">立即联系</a>
       </div>
-      <div class="struggleContainer">
-        <div class="struggleText">
-          Do you struggle with your production?
-        </div>
-        <div class="struggleQuestionsContainer">
-          <div class="struggleQuestion">
-            <div class="stuggleQuestionText">
-              DO YOU NEED A FACTORY THAT CAN PRODUCE QUALITY GARMENTS?
-            </div>
+      <div class="solutionContainer" id="solution">
+        <div class="solutionText">行业解决方案</div>
+        <div class="solutionItemContainer">
+          <div class="solutionItem">
+            <div class="solutionItemText">轨道交通</div>
             <img src="../assets/svg_01.png" />
           </div>
-          <div class="struggleQuestion">
-            <div class="stuggleQuestionText">
-              ARE YOU TRYING TO SOURCE QUALITY FABRICS IN CHINA?
-            </div>
+          <div class="solutionItem">
+            <div class="solutionItemText">海洋</div>
             <img src="../assets/svg_02.png" />
           </div>
-          <div class="struggleQuestion">
-            <div class="stuggleQuestionText">
-              DO YOU WORRY ABOUT HOW YOUR PRODUCTION PARTNERS TREAT THEIR
-              WORKERS?
-            </div>
+          <div class="solutionItem">
+            <div class="solutionItemText">医学</div>
+            <img src="../assets/svg_03.png" />
+          </div>
+          <div class="solutionItem">
+            <div class="solutionItemText">教育教学</div>
+            <img src="../assets/svg_03.png" />
+          </div>
+          <div class="solutionItem">
+            <div class="solutionItemText">工程机械</div>
+            <img src="../assets/svg_03.png" />
+          </div>
+          <div class="solutionItem">
+            <div class="solutionItemText">软件开发</div>
             <img src="../assets/svg_03.png" />
           </div>
         </div>
-        <div class="topButton">
-          We can help.
-        </div>
+        <a href="/#contact" class="topButton">立即实践</a>
       </div>
+      <div class="productContainer" id="product">
+        <div class="productText">产品和服务</div>
+        <div class="productItemContainer">
+          <div class="productItem">
+            <div class="productItemText">虚拟现实仿真软件开发</div>
+            <img src="../assets/svg_01.png" />
+          </div>
+          <div class="productItem">
+            <div class="productItemText">智能制造及轻量化设计</div>
+            <img src="../assets/svg_02.png" />
+          </div>
+          <div class="productItem">
+            <div class="productItemText">高性能计算系统集成与服务</div>
+            <img src="../assets/svg_03.png" />
+          </div>
+          <div class="productItem">
+            <div class="productItemText">图像处理与数据分析</div>
+            <img src="../assets/svg_03.png" />
+          </div>
+          <div class="productItem">
+            <div class="productItemText">在线产品三维可视化设计</div>
+            <img src="../assets/svg_03.png" />
+          </div>
+          <div class="productItem">
+            <div class="productItemText">三维数字化系统开发技术咨询</div>
+            <img src="../assets/svg_03.png" />
+          </div>
+        </div>
+        <a href="/#contact" class="topButton">我想进一步了解。</a>
+      </div>
+      <div class="caseContainer" id="case">
+        <div class="caseText">应用案例</div>
+        <div class="caseItemContainer">
+          <div class="caseItem">
+            <div class="caseItemText">工业互联网海量异构数据融合</div>
+            <img src="../assets/case1.png" />
+          </div>
+          <div class="caseItem">
+            <div class="caseItemText">复杂系统时空四维连续演化建模方法</div>
+            <img src="../assets/case2.png" />
+          </div>
+        </div>
+        <a href="/#contact" class="topButton">我想获取更多成功应用案例资料。</a>
+      </div>
+
+      <div class="caseContainer" id="case"></div>
     </div>
   </div>
 </template>
@@ -96,7 +137,7 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   components: {},
-  props: {}
+  props: {},
 })
 export default class Home extends Vue {
   currentPosition = "Home";
@@ -133,7 +174,7 @@ export default class Home extends Vue {
     this.isNavigationHidden = !this.isNavigationHidden;
     this.isModalMaskHidden = !this.isModalMaskHidden;
     if (!this.isNavigationHidden) {
-      this.modalMaskClickHandler = function() {
+      this.modalMaskClickHandler = function () {
         this.onMenuButtonClicked();
       };
     } else {
@@ -162,8 +203,8 @@ export default class Home extends Vue {
 }
 .header {
   --color: black;
-  --background-color: rgb(200, 200, 200, 0.75);
-  --logo: url("../assets/logo_black.png");
+  --background-color: rgb(255, 255, 255, 0.75);
+  --logo: url("../assets/logo-img.png");
   color: var(--color);
   background-color: var(--background-color);
   display: flex;
@@ -177,13 +218,13 @@ export default class Home extends Vue {
 .headerDark {
   --color: white;
   --background-color: rgb(50, 50, 50, 0.75);
-  --logo: url("../assets/logo_white.png");
+  --logo: url("../assets/logo-img-white.png");
 }
 .logo {
   background-image: var(--logo);
-  background-size: cover;
-  width: 24.2px;
-  height: 29.1px;
+  background-size: contain;
+  width: 30px;
+  height: 24px;
   margin: 0px 4px 0px 10px;
 }
 .title {
@@ -230,12 +271,12 @@ ul {
       display: none;
     }
     .logo {
-      background-image: url("../assets/logo_black.png");
-      background-size: cover;
-      width: 24.2px;
-      height: 29.1px;
+      background-image: url("../assets/logo-img.png");
+      background-size: contain;
+      width: 30px;
+      height: 24px;
     }
-    .closeButton{
+    .closeButton {
       cursor: pointer;
       font-size: 1.5rem;
     }
@@ -253,6 +294,8 @@ ul {
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
+  margin-right: 1rem;
+  fill: var(--color);
 }
 .threeLineIcon {
   width: 20px;
@@ -267,6 +310,7 @@ ul {
   height: calc(100vh + 50px);
   margin-top: -50px;
   background-image: url("../assets/big-img-m.jpg");
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -275,12 +319,12 @@ ul {
   .preTitle {
     margin-top: 20vh;
     width: 90%;
-    font-size: 2rem;
+    font-size: 4rem;
     text-align: center;
   }
   .middleTitle {
     width: 90%;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
   }
   .postTitle {
@@ -290,7 +334,7 @@ ul {
   }
   .topButton {
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 10vh;
     border: 1px solid #fff;
@@ -303,20 +347,20 @@ ul {
     }
   }
 }
-.struggleContainer {
+.solutionContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  .struggleText {
+  .solutionText {
     margin: 10vh 0px;
     width: 90%;
     font-size: 4rem;
     text-align: center;
   }
-  .struggleQuestionsContainer {
+  .solutionItemContainer {
     display: flex;
     flex-flow: wrap;
-    .struggleQuestion {
+    .solutionItem {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -325,7 +369,7 @@ ul {
       @media (min-width: 800px) {
         width: 33%;
       }
-      .stuggleQuestionText {
+      .solutionItemText {
         width: 90%;
         font-size: 2rem;
         text-align: center;
@@ -338,7 +382,113 @@ ul {
   }
   .topButton {
     color: black;
-    font-size: 3rem;
+    font-size: 2rem;
+    text-align: center;
+    margin: 10vh 0px;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration-line: none;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+    cursor: pointer;
+  }
+}
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: white;
+  .productText {
+    margin: 10vh 0px;
+    width: 90%;
+    font-size: 4rem;
+    text-align: center;
+  }
+  .productItemContainer {
+    display: flex;
+    flex-flow: wrap;
+    .productItem {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      @media (min-width: 800px) {
+        width: 33%;
+      }
+      .productItemText {
+        width: 90%;
+        font-size: 2rem;
+        text-align: center;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+  .topButton {
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    margin: 10vh 0px;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration-line: none;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+    cursor: pointer;
+  }
+}
+.caseContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .caseText {
+    margin: 10vh 0px;
+    width: 90%;
+    font-size: 4rem;
+    text-align: center;
+  }
+  .caseItemContainer {
+    display: flex;
+    flex-flow: wrap;
+    .caseItem {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      @media (min-width: 800px) {
+        width: 100%;
+      }
+      .caseItemText {
+        width: 90%;
+        font-size: 2rem;
+        text-align: center;
+      }
+      img {
+        width: 75vw;
+        //height: 75vw;
+      }
+    }
+  }
+  .topButton {
+    color: black;
+    font-size: 2rem;
     text-align: center;
     margin: 10vh 0px;
     border: 1px solid black;
