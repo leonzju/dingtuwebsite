@@ -129,6 +129,13 @@
 
       <div class="caseContainer" id="case"></div>
     </div>
+    <div class="footer">
+      <div>
+        营业执照注册号：91430104MA4RMAKX34 @2020-2025 湖南鼎图智能科技有限公司
+        版权所有
+      </div>
+      <a href="https://beian.miit.gov.cn/">湘ICP备2021010368号-1</a>
+    </div>
   </div>
 </template>
 
@@ -137,7 +144,7 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   components: {},
-  props: {},
+  props: {}
 })
 export default class Home extends Vue {
   currentPosition = "Home";
@@ -174,7 +181,7 @@ export default class Home extends Vue {
     this.isNavigationHidden = !this.isNavigationHidden;
     this.isModalMaskHidden = !this.isModalMaskHidden;
     if (!this.isNavigationHidden) {
-      this.modalMaskClickHandler = function () {
+      this.modalMaskClickHandler = function() {
         this.onMenuButtonClicked();
       };
     } else {
@@ -503,6 +510,17 @@ ul {
       color: white;
     }
     cursor: pointer;
+  }
+}
+.footer {
+  color: black;
+  background-color: gray;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem 0px;
+  a {
+    color: black;
+    text-decoration-line: none;
   }
 }
 
