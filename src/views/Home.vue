@@ -44,10 +44,10 @@
       </div>
     </div>
     <div class="content">
-      <div class="topImageTextContainer" id="introduction">
+      <div class="introductionContainer" id="introduction">
         <div class="preTitle">公司介绍</div>
         <div class="middleTitle">
-          湖南鼎图智能科技有限公司是一家以虚拟现实系统开发、智能制造服务技术、高性能计算系统方案为核心的高科技企业。公司秉承“科技改变世界”为宗旨，通过高性能仿真分析、数字样机与数字孪生、大数据处理和分析、以及虚拟交互可视化，助力企业提升数字化、网络化和智能化水平，变革传统生产、制造、销售和维护等模式，提高产品全生命周期性能和效率。
+          湖南鼎图智能科技有限公司成立于2020年9月，是一家聚焦于VR（虚拟现实）/AR（增强现实）/MR（混合现实）软件开发和内容制作的技术驱动型公司。公司创始人和核心员工毕业于国内外顶尖高校，长期深耕于计算机图形学、虚拟现实和高性能计算等领域。公司具备完整的虚拟仿真硬件系统搭建和定制软件开发的全套解决方案，拥有自主研发高性能3D图形软件系统，和基于各种主流商业引擎或者开源平台进行深度定制开发和内容制作的技术能力，提供全方位的虚拟仿真定制开发技术服务。
         </div>
         <div class="postTitle"></div>
         <a href="/#contact" class="topButton">立即联系</a>
@@ -57,27 +57,27 @@
         <div class="solutionItemContainer">
           <div class="solutionItem">
             <div class="solutionItemText">轨道交通</div>
-            <img src="../assets/svg_01.png" />
+            <img src="../assets/solution_01.png" />
           </div>
           <div class="solutionItem">
             <div class="solutionItemText">海洋</div>
-            <img src="../assets/svg_02.png" />
+            <img src="../assets/solution_02.png" />
           </div>
           <div class="solutionItem">
             <div class="solutionItemText">医学</div>
-            <img src="../assets/svg_03.png" />
+            <img src="../assets/solution_03.png" />
           </div>
           <div class="solutionItem">
             <div class="solutionItemText">教育教学</div>
-            <img src="../assets/svg_03.png" />
+            <img src="../assets/solution_04.png" />
           </div>
           <div class="solutionItem">
-            <div class="solutionItemText">工程机械</div>
-            <img src="../assets/svg_03.png" />
+            <div class="solutionItemText">材料成型</div>
+            <img src="../assets/solution_05.png" />
           </div>
           <div class="solutionItem">
             <div class="solutionItemText">软件开发</div>
-            <img src="../assets/svg_03.png" />
+            <img src="../assets/solution_06.png" />
           </div>
         </div>
         <a href="/#contact" class="topButton">立即实践</a>
@@ -87,27 +87,27 @@
         <div class="productItemContainer">
           <div class="productItem">
             <div class="productItemText">虚拟现实仿真软件开发</div>
-            <img src="../assets/svg_01.png" />
+            <img src="../assets/product-1.jpeg" />
           </div>
           <div class="productItem">
             <div class="productItemText">智能制造及轻量化设计</div>
-            <img src="../assets/svg_02.png" />
+            <img src="../assets/product-2.png" />
           </div>
           <div class="productItem">
             <div class="productItemText">高性能计算系统集成与服务</div>
-            <img src="../assets/svg_03.png" />
+            <img src="../assets/product-3.jpeg" />
           </div>
           <div class="productItem">
             <div class="productItemText">图像处理与数据分析</div>
-            <img src="../assets/svg_03.png" />
+            <img src="../assets/product-4.jpeg" />
           </div>
           <div class="productItem">
-            <div class="productItemText">在线产品三维可视化设计</div>
-            <img src="../assets/svg_03.png" />
+            <div class="productItemText">三维产品设计及可视化</div>
+            <img src="../assets/product-5.png" />
           </div>
           <div class="productItem">
-            <div class="productItemText">三维数字化系统开发技术咨询</div>
-            <img src="../assets/svg_03.png" />
+            <div class="productItemText">数字孪生系统开发及咨询服务</div>
+            <img src="../assets/product-6.jpeg" />
           </div>
         </div>
         <a href="/#contact" class="topButton">我想进一步了解。</a>
@@ -116,18 +116,47 @@
         <div class="caseText">应用案例</div>
         <div class="caseItemContainer">
           <div class="caseItem">
-            <div class="caseItemText">工业互联网海量异构数据融合</div>
-            <img src="../assets/case1.png" />
+            <div class="caseItemText">列车虚拟装配和维修系统</div>
+            <img src="../assets/case-1-1.jpg" />
+            <img src="../assets/case-1-2.jpg" />
+            <img src="../assets/case-1-3.jpg" />
           </div>
           <div class="caseItem">
-            <div class="caseItemText">复杂系统时空四维连续演化建模方法</div>
-            <img src="../assets/case2.png" />
+            <div class="caseItemText">
+              数字化人体解剖学培训系统和医学专用领域仿真系统
+            </div>
+            <img src="../assets/case-2-1.jpg" />
+            <img src="../assets/case-2-2.jpg" />
+          </div>
+          <div class="caseItem">
+            <div class="caseItemText">医护培训和考核系统</div>
+            <img src="../assets/case-3-1.jpg" />
           </div>
         </div>
         <a href="/#contact" class="topButton">我想获取更多成功应用案例资料。</a>
       </div>
 
-      <div class="caseContainer" id="case"></div>
+      <div class="contactContainer" id="contact">
+        <div class="contactItemContainer">
+          <div class="contactItemInformation">
+            <p class="contactItemTitle">联系我们</p>
+            <p class="contactItemText">微信公众号：湖南鼎图智能科技有限公司</p>
+            <p class="contactItemText">微信号：HNDTZN2020</p>
+            <p class="contactItemText">电话：15873113796</p>
+            <p class="contactItemText">
+              地址：湖南省长沙市岳麓区潇湘南路182号奥克斯中心S5栋1506
+            </p>
+            <div class="contactItemText">
+              <a href="mailto:wuping@dingtutech.com"
+                >邮箱：wuping@dingtutech.com</a
+              >
+            </div>
+          </div>
+          <div class="contactItemMap">
+            <img src="../assets/map_location.png" />
+          </div>
+        </div>
+      </div>
     </div>
     <div class="footer">
       <div>
@@ -144,7 +173,7 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   components: {},
-  props: {}
+  props: {},
 })
 export default class Home extends Vue {
   currentPosition = "Home";
@@ -181,7 +210,7 @@ export default class Home extends Vue {
     this.isNavigationHidden = !this.isNavigationHidden;
     this.isModalMaskHidden = !this.isModalMaskHidden;
     if (!this.isNavigationHidden) {
-      this.modalMaskClickHandler = function() {
+      this.modalMaskClickHandler = function () {
         this.onMenuButtonClicked();
       };
     } else {
@@ -210,7 +239,7 @@ export default class Home extends Vue {
 }
 .header {
   --color: black;
-  --background-color: rgb(255, 255, 255, 0.75);
+  --background-color: rgb(255, 255, 255, 0.5);
   --logo: url("../assets/logo-img.png");
   color: var(--color);
   background-color: var(--background-color);
@@ -237,6 +266,7 @@ export default class Home extends Vue {
 .title {
   text-align: center;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 ul {
   list-style-type: none;
@@ -265,6 +295,7 @@ ul {
   align-items: flex-end;
   background: white;
   padding: 0px;
+  font-weight: bold;
   .navigationHeader {
     display: flex;
     justify-content: space-around;
@@ -312,44 +343,45 @@ ul {
 .content {
   width: 100%;
 }
-.topImageTextContainer {
+.introductionContainer {
   width: 100vw;
   height: calc(100vh + 50px);
   margin-top: -50px;
-  background-image: url("../assets/big-img-m.jpg");
+  background-image: url("../assets/big-img-1-m.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   color: white;
   .preTitle {
-    margin-top: 20vh;
-    width: 90%;
-    font-size: 4rem;
+    margin: 25vh 5vh 0 5vh;
+    //width: 90%;
+    font-size: 2rem;
     text-align: center;
   }
   .middleTitle {
-    width: 90%;
-    font-size: 2rem;
-    text-align: center;
-  }
-  .postTitle {
-    width: 90%;
-    font-size: 2rem;
-    text-align: center;
+    //width: 90%;
+     @media (min-width: 800px) {
+        width: 40%;
+      }
+      margin: 5vh 5vh 0 5vh;
+    font-size: 1.2rem;
+    text-align: left;
+    line-height: 2em;
   }
   .topButton {
     color: white;
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: center;
-    margin-bottom: 10vh;
-    border: 1px solid #fff;
-    border-radius: 2px;
-    padding: 2vh 8vw;
+    margin: 5vh;
+    border: 1px solid #2098c4;
+    border-radius: 5px;
+    padding: 5px 15px;
     text-decoration-line: none;
+    background-color: #2098c4;
     &:hover {
       background-color: #f5f5f5;
+      border: 1px solid #f5f5f5;
       color: black;
     }
   }
@@ -361,12 +393,13 @@ ul {
   .solutionText {
     margin: 10vh 0px;
     width: 90%;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
   }
   .solutionItemContainer {
     display: flex;
     flex-flow: wrap;
+    width: 75%;
     .solutionItem {
       width: 100%;
       display: flex;
@@ -382,8 +415,9 @@ ul {
         text-align: center;
       }
       img {
-        width: 200px;
-        height: 200px;
+        width: 110px;
+        height: 110px;
+        margin: 20px 20px 40px 20px;
       }
     }
   }
@@ -410,12 +444,13 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
+  background-image: url("../assets/big-img-2.png");
+  background-size: cover;
   color: white;
   .productText {
     margin: 10vh 0px;
     width: 90%;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
   }
   .productItemContainer {
@@ -436,17 +471,18 @@ ul {
         text-align: center;
       }
       img {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 150px;
+        margin: 20px 20px 40px 20px;
       }
     }
   }
   .topButton {
-    color: black;
+    color: white;
     font-size: 2rem;
     text-align: center;
     margin: 10vh 0px;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 2px;
     padding-left: 26px;
     padding-right: 26px;
@@ -454,8 +490,8 @@ ul {
     padding-bottom: 10px;
     text-decoration-line: none;
     &:hover {
-      background-color: black;
-      color: white;
+      background-color: white;
+      color: black;
     }
     cursor: pointer;
   }
@@ -467,7 +503,7 @@ ul {
   .caseText {
     margin: 10vh 0px;
     width: 90%;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
   }
   .caseItemContainer {
@@ -512,6 +548,60 @@ ul {
     cursor: pointer;
   }
 }
+
+.contactContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  .contactItemContainer {
+    display: flex;
+    flex-flow: wrap;
+    .contactItemInformation {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      @media (min-width: 800px) {
+        width: 40%;
+      }
+      .contactItemTitle {
+        width: 90%;
+        font-size: 3rem;
+        text-align: left;
+        margin: 16px 10px;
+      }
+      .contactItemText {
+        width: 90%;
+        font-size: 1rem;
+        text-align: left;
+        margin: 16px 10px;
+        a {
+          width: 100%;
+          color: black;
+          @media (min-width: 800px) {
+            color: inherit;
+          }
+          text-decoration-line: underline;
+        }
+      }
+    }
+    .contactItemMap {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: left;
+      @media (min-width: 800px) {
+        width: 60%;
+      }
+      img {
+        height: 80vh;
+        width: 100vh;
+      }
+    }
+  }
+}
+
 .footer {
   color: black;
   background-color: gray;
@@ -546,36 +636,19 @@ ul {
       border-bottom: 2px solid transparent;
       &:active,
       &:hover {
-        text-shadow: 0 0 1px var(--color), 0 0 1px var(--color);
+        //text-shadow: 0 0 1px var(--color), 0 0 1px var(--color);
         border-bottom: 2px solid var(--color);
       }
       width: initial;
       height: initial;
       margin: 0 5%;
     }
-    :last-child {
-      border-bottom: initial;
-      text-align: center;
-      text-decoration-line: none;
-      padding: 2px 6px;
-      &:active,
-      &:hover {
-        text-shadow: initial;
-        border-bottom: initial;
-      }
-      a {
-        background-color: var(--color);
-        color: var(--background-color);
-        border-radius: 4px;
-        text-decoration-line: none;
-      }
-    }
   }
   .navigationHidden {
     display: flex;
   }
-  .topImageTextContainer {
-    background-image: url("../assets/big-img.jpg");
+  .introductionContainer {
+    background-image: url("../assets/big-img-1.jpg");
   }
 }
 @media (min-width: 1200px) {
