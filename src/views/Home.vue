@@ -560,7 +560,7 @@ ul {
       width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: left;
+      align-items: flex-start;
       @media (min-width: 800px) {
         width: 40%;
       }
@@ -596,7 +596,10 @@ ul {
       }
       img {
         height: 80vh;
-        width: 100vh;
+        width: 100%;
+        @media (min-width: 800px) {
+            width: 100vh;
+        }
       }
     }
   }
