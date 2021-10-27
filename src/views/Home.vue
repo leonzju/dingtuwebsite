@@ -115,23 +115,15 @@
       <div class="caseContainer" id="case">
         <div class="caseText">应用案例</div>
         <div class="caseItemContainer">
-          <div class="caseItem">
-            <div class="caseItemText">列车虚拟装配和维修系统</div>
-            <img src="../assets/case-1-1.jpg" />
-            <img src="../assets/case-1-2.jpg" />
-            <img src="../assets/case-1-3.jpg" />
-          </div>
-          <div class="caseItem">
-            <div class="caseItemText">
-              数字化人体解剖学培训系统和医学专用领域仿真系统
-            </div>
-            <img src="../assets/case-2-1.jpg" />
-            <img src="../assets/case-2-2.jpg" />
-          </div>
-          <div class="caseItem">
-            <div class="caseItemText">医护培训和考核系统</div>
-            <img src="../assets/case-3-1.jpg" />
-          </div>
+          <Carousel :settings="settings" :breakpoints="breakpoints">
+            <Slide v-for="cs in cases" :key="cs.url">
+              <img class="carousel__item" :src="cs.url" />
+            </Slide>
+            <template #addons>
+              <Pagination />
+              <Navigation />
+            </template>
+          </Carousel>
         </div>
         <a href="/#contact" class="topButton">我想获取更多成功应用案例资料。</a>
       </div>
@@ -171,8 +163,23 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import "vue3-carousel/dist/carousel.css";
+
+import case11 from "@/assets/case-1-1.jpg";
+import case12 from "@/assets/case-1-2.jpg";
+import case13 from "@/assets/case-1-3.jpg";
+import case21 from "@/assets/case-2-1.jpg";
+import case22 from "@/assets/case-2-2.jpg";
+import case31 from "@/assets/case-3-1.jpg";
+
 @Options({
-  components: {},
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
   props: {},
 })
 export default class Home extends Vue {
@@ -180,6 +187,32 @@ export default class Home extends Vue {
   isHeaderDark = false;
   isNavigationHidden = true;
   isModalMaskHidden = true;
+  data() {
+    return {
+      cases: [{ url: case11 }, { url: case12 }, { url: case13 }],
+      // carousel settings
+      settings: {
+        itemsToShow: 1,
+        autoplay: 2000,
+        snapAlign: "center",
+        wrapAround: true
+      },
+      // breakpoints are mobile first
+      // any settings not specified will fallback to the carousel settings
+      breakpoints: {
+        // 700px and up
+        700: {
+          itemsToShow: 1.2,
+          snapAlign: "center",
+        },
+        // 1024 and up
+        1024: {
+          itemsToShow: 2,
+          snapAlign: "start",
+        },
+      },
+    };
+  }
   modalMaskClickHandler?: () => void = undefined;
   mounted() {
     //给window添加一个滚动滚动监听事件
@@ -222,6 +255,33 @@ export default class Home extends Vue {
   }
 }
 </script>
+
+<style lang="scss">
+:root {
+  --vc-clr-primary: DeepSkyBlue;
+}
+.carousel__item {
+  min-height: 200px;
+  width: 100%;
+  background-color: var(--vc-clr-primary);
+  color: var(--vc-clr-white);
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__slide {
+  padding: 10px;
+}
+
+.carousel__prev,
+.carousel__next {
+  box-sizing: content-box;
+  border: 5px solid white;
+}
+</style>
 
 <style lang="scss" scoped>
 .modalMask {
@@ -349,6 +409,8 @@ ul {
   margin-top: -50px;
   background-image: url("../assets/big-img-1-m.jpg");
   background-size: cover;
+  background-position: center;
+  //background-attachment: fixed;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -361,10 +423,10 @@ ul {
   }
   .middleTitle {
     //width: 90%;
-     @media (min-width: 800px) {
-        width: 40%;
-      }
-      margin: 5vh 5vh 0 5vh;
+    @media (min-width: 800px) {
+      width: 40%;
+    }
+    margin: 5vh 5vh 0 5vh;
     font-size: 1.2rem;
     text-align: left;
     line-height: 2em;
@@ -507,6 +569,7 @@ ul {
     text-align: center;
   }
   .caseItemContainer {
+    width: 95%;
     display: flex;
     flex-flow: wrap;
     .caseItem {
@@ -598,7 +661,7 @@ ul {
         height: 80vh;
         width: 100%;
         @media (min-width: 800px) {
-            width: 100vh;
+          width: 100vh;
         }
       }
     }
