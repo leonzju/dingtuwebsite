@@ -54,66 +54,87 @@
       </div>
       <div class="solutionContainer" id="solution">
         <div class="solutionText">行业解决方案</div>
+        <img class="seperatorImg" src="../assets/img1.png" />
         <div class="solutionItemContainer">
           <div class="solutionItem">
-            <div class="solutionItemText">轨道交通</div>
-            <img src="../assets/solution_01.png" />
+            <img class="solutionImg" src="../assets/jjfa1.jpg" />
+            <div class="solutionInnerContainer">
+              <img class="solutionItemIcon" src="../assets/icon1.png" />
+              <div class="solutionItemText">轨道交通</div>
+            </div>
           </div>
           <div class="solutionItem">
-            <div class="solutionItemText">海洋</div>
-            <img src="../assets/solution_02.png" />
+            <img class="solutionImg" src="../assets/jjfa2.jpg" />
+            <div class="solutionInnerContainer">
+              <img class="solutionItemIcon" src="../assets/icon2.png" />
+              <div class="solutionItemText">海洋</div>
+            </div>
           </div>
           <div class="solutionItem">
-            <div class="solutionItemText">医学</div>
-            <img src="../assets/solution_03.png" />
+            <img class="solutionImg" src="../assets/jjfa3.jpg" />
+            <div class="solutionInnerContainer">
+              <img class="solutionItemIcon" src="../assets/icon3.png" />
+              <div class="solutionItemText">医学</div>
+            </div>
           </div>
           <div class="solutionItem">
-            <div class="solutionItemText">教育教学</div>
-            <img src="../assets/solution_04.png" />
+            <img class="solutionImg" src="../assets/jjfa4.jpg" />
+            <div class="solutionInnerContainer">
+              <img class="solutionItemIcon" src="../assets/icon4.png" />
+              <div class="solutionItemText">教育教学</div>
+            </div>
           </div>
           <div class="solutionItem">
-            <div class="solutionItemText">材料成型</div>
-            <img src="../assets/solution_05.png" />
+            <img class="solutionImg" src="../assets/jjfa5.jpg" />
+            <div class="solutionInnerContainer">
+              <img class="solutionItemIcon" src="../assets/icon5.png" />
+              <div class="solutionItemText">材料成型</div>
+            </div>
           </div>
           <div class="solutionItem">
-            <div class="solutionItemText">软件开发</div>
-            <img src="../assets/solution_06.png" />
+            <img class="solutionImg" src="../assets/jjfa6.jpg" />
+            <div class="solutionInnerContainer">
+              <img class="solutionItemIcon" src="../assets/icon6.png" />
+              <div class="solutionItemText">软件开发</div>
+            </div>
           </div>
         </div>
         <a href="/#contact" class="topButton">立即实践</a>
       </div>
       <div class="productContainer" id="product">
         <div class="productText">产品和服务</div>
+        <img class="seperatorImg" src="../assets/img2.png" />
         <div class="productItemContainer">
           <div class="productItem">
+            <img src="../assets/cpfw1.jpg" />
             <div class="productItemText">虚拟现实仿真软件开发</div>
-            <img src="../assets/product-1.jpeg" />
           </div>
           <div class="productItem">
+            <img src="../assets/cpfw2.jpg" />
             <div class="productItemText">智能制造及轻量化设计</div>
-            <img src="../assets/product-2.png" />
           </div>
           <div class="productItem">
+            <img src="../assets/cpfw3.jpg" />
             <div class="productItemText">高性能计算系统集成与服务</div>
-            <img src="../assets/product-3.jpeg" />
           </div>
           <div class="productItem">
+            <img src="../assets/cpfw4.jpg" />
             <div class="productItemText">图像处理与数据分析</div>
-            <img src="../assets/product-4.jpeg" />
           </div>
           <div class="productItem">
+            <img src="../assets/cpfw5.jpg" />
             <div class="productItemText">三维产品设计及可视化</div>
-            <img src="../assets/product-5.png" />
           </div>
           <div class="productItem">
+            <img src="../assets/cpfw6.jpg" />
             <div class="productItemText">数字孪生系统开发及咨询服务</div>
-            <img src="../assets/product-6.jpeg" />
           </div>
         </div>
         <a href="/#contact" class="topButton">我想进一步了解。</a>
       </div>
       <div class="caseContainer" id="case">
         <div class="caseText">应用案例</div>
+        <img class="seperatorImg" src="../assets/img3.png" />
         <div class="caseItemContainer">
           <Carousel :settings="settings" :breakpoints="breakpoints">
             <Slide v-for="cs in cases" :key="cs.url">
@@ -125,7 +146,9 @@
             </template>
           </Carousel>
         </div>
-        <a href="/#contact" class="topButton">我想获取更多成功应用案例资料。</a>
+        <a href="/#contact" class="topButtonMinor"
+          >获取更多成功案例资料。</a
+        >
       </div>
 
       <div class="contactContainer" id="contact">
@@ -145,7 +168,7 @@
             </div>
           </div>
           <div class="contactItemMap">
-            <img src="../assets/map_location.png" />
+            <img src="../assets/map_location-m.png" />
           </div>
         </div>
       </div>
@@ -169,6 +192,8 @@ import "vue3-carousel/dist/carousel.css";
 import case11 from "@/assets/case-1-1.jpg";
 import case12 from "@/assets/case-1-2.jpg";
 import case13 from "@/assets/case-1-3.jpg";
+import case14 from "@/assets/case-1-4.jpg";
+import case15 from "@/assets/case-1-5.jpg";
 import case21 from "@/assets/case-2-1.jpg";
 import case22 from "@/assets/case-2-2.jpg";
 import case31 from "@/assets/case-3-1.jpg";
@@ -189,13 +214,22 @@ export default class Home extends Vue {
   isModalMaskHidden = true;
   data() {
     return {
-      cases: [{ url: case11 }, { url: case12 }, { url: case13 }],
+      cases: [
+        { url: case11 },
+        { url: case12 },
+        { url: case13 },
+        { url: case14 },
+        { url: case15 },
+        { url: case21 },
+        { url: case22 },
+        { url: case31 },
+      ],
       // carousel settings
       settings: {
         itemsToShow: 1,
         autoplay: 2000,
         snapAlign: "center",
-        wrapAround: true
+        wrapAround: true,
       },
       // breakpoints are mobile first
       // any settings not specified will fallback to the carousel settings
@@ -405,9 +439,12 @@ ul {
 }
 .introductionContainer {
   width: 100vw;
-  height: calc(100vh + 50px);
+  //height: calc(100vh + 50px);
+  @media (min-width: 800px) {
+    height: 100vh;
+  }
   margin-top: -50px;
-  background-image: url("../assets/big-img-1-m.jpg");
+  background-image: url("../assets/banner2.jpg");
   background-size: cover;
   background-position: center;
   //background-attachment: fixed;
@@ -448,12 +485,18 @@ ul {
     }
   }
 }
+.seperatorImg {
+  margin: 0vh 0px 5vh;
+}
 .solutionContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: 800px) {
+    height: 100vh;
+  }
   .solutionText {
-    margin: 10vh 0px;
+    margin: 7vh 0px 3vh;
     width: 90%;
     font-size: 3rem;
     text-align: center;
@@ -463,23 +506,46 @@ ul {
     flex-flow: wrap;
     width: 75%;
     .solutionItem {
-      width: 100%;
+      position: relative;
+      width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+      padding: 15px 5px;
       @media (min-width: 800px) {
         width: 33%;
       }
-      .solutionItemText {
+      .solutionImg {
+        margin: 0;
         width: 90%;
-        font-size: 2rem;
-        text-align: center;
+        width: 90%;
+        @media (min-width: 800px) {
+          width: 100%;
+        }
       }
-      img {
-        width: 110px;
-        height: 110px;
-        margin: 20px 20px 40px 20px;
+      .solutionInnerContainer {
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        top: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        .solutionItemIcon {
+          width: 60px;
+          height: 60px;
+          @media (min-width: 800px) {
+            width: 80px;
+            height: 80px;
+          }
+        }
+        .solutionItemText {
+          color: white;
+          font-size: 1rem;
+          text-align: center;
+        }
       }
     }
   }
@@ -506,11 +572,14 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../assets/big-img-2.png");
+  background-image: url("../assets/bg1.jpg");
   background-size: cover;
   color: white;
+  @media (min-width: 800px) {
+    height: 100vh;
+  }
   .productText {
-    margin: 10vh 0px;
+    margin: 7vh 0px 3vh;
     width: 90%;
     font-size: 3rem;
     text-align: center;
@@ -529,13 +598,15 @@ ul {
       }
       .productItemText {
         width: 90%;
-        font-size: 2rem;
+        font-size: 1rem;
         text-align: center;
+        margin: 0px;
       }
       img {
-        width: 300px;
-        height: 150px;
-        margin: 20px 20px 40px 20px;
+        width: 200px;
+        //height: 150px;
+        margin: 20px 20px 10px 20px;
+        border-radius: 100px;
       }
     }
   }
@@ -562,16 +633,20 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   .caseText {
-    margin: 10vh 0px;
+    margin: 5vh 0px 3vh;
     width: 90%;
     font-size: 3rem;
     text-align: center;
   }
   .caseItemContainer {
-    width: 95%;
+    width: 90%;
     display: flex;
     flex-flow: wrap;
+    @media (min-width: 800px) {
+      width: 100%;
+    }
     .caseItem {
       width: 100%;
       display: flex;
@@ -597,6 +672,24 @@ ul {
     font-size: 2rem;
     text-align: center;
     margin: 10vh 0px;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration-line: none;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+    cursor: pointer;
+  }
+  .topButtonMinor {
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    margin: 3vh 0px 10vh;
     border: 1px solid black;
     border-radius: 2px;
     padding-left: 26px;
@@ -658,10 +751,10 @@ ul {
         width: 60%;
       }
       img {
-        height: 80vh;
+        //height: 80vh;
         width: 100%;
-        @media (min-width: 800px) {
-          width: 100vh;
+        @media (min-width: 800px) {          
+          content:url("../assets/map_location.png"); 
         }
       }
     }
@@ -714,7 +807,7 @@ ul {
     display: flex;
   }
   .introductionContainer {
-    background-image: url("../assets/big-img-1.jpg");
+    background-image: url("../assets/banner_bg.jpg");
   }
 }
 @media (min-width: 1200px) {
