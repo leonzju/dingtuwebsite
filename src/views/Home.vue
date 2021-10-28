@@ -146,7 +146,7 @@
             </template>
           </Carousel>
         </div>
-        <a href="/#contact" class="topButtonMinor"
+        <a href="/#contact" class="topButton"
           >获取更多成功案例资料。</a
         >
       </div>
@@ -520,8 +520,10 @@ ul {
         margin: 0;
         width: 90%;
         width: 90%;
+        max-width: 240px;
         @media (min-width: 800px) {
-          width: 100%;
+          width: 75%;
+          max-width: 240px;
         }
       }
       .solutionInnerContainer {
@@ -553,7 +555,7 @@ ul {
     color: black;
     font-size: 2rem;
     text-align: center;
-    margin: 10vh 0px;
+    margin: 3vh 0px 10vh;
     border: 1px solid black;
     border-radius: 2px;
     padding-left: 26px;
@@ -645,7 +647,7 @@ ul {
     display: flex;
     flex-flow: wrap;
     @media (min-width: 800px) {
-      width: 100%;
+      width: 95%;
     }
     .caseItem {
       width: 100%;
@@ -668,24 +670,6 @@ ul {
     }
   }
   .topButton {
-    color: black;
-    font-size: 2rem;
-    text-align: center;
-    margin: 10vh 0px;
-    border: 1px solid black;
-    border-radius: 2px;
-    padding-left: 26px;
-    padding-right: 26px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-decoration-line: none;
-    &:hover {
-      background-color: black;
-      color: white;
-    }
-    cursor: pointer;
-  }
-  .topButtonMinor {
     color: black;
     font-size: 2rem;
     text-align: center;
